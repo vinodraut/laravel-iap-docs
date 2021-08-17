@@ -5,19 +5,20 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'Laravel In-App Purchase',
   tagline: 'The top-notch receipt validator!',
-  url: 'https://imdhemy.com',
-  baseUrl: '/',
+  url: 'https://imdhemy.github.io',
+  baseUrl: '/laravel-iap-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'imdhemy', // Usually your GitHub org/user name.
-  projectName: 'laravel-iap-docs', // Usually your repo name.
+  organizationName: 'imdhemy',
+  projectName: 'laravel-iap-docs',
+  trailingSlash: false,
   themeConfig: {
     navbar: {
       title: 'Home',
       logo: {
         alt: 'Laravel IAP',
-        src: 'img/logo.svg',
+        src: '/img/logo.svg',
       },
       items: [
         {
