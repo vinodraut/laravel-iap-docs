@@ -1,0 +1,1 @@
+# AppSore IAP Manual
