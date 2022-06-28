@@ -17,7 +17,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            Get started 🚀
           </Link>
         </div>
       </div>
@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <Layout
       title={`Docs`}
-      description="Description will go into a meta tag in <head />">
+      description="The top-notch Laravel in-app purchases receipt validator">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

@@ -18,7 +18,7 @@ module.exports = {
       title: 'Home',
       logo: {
         alt: 'Laravel IAP',
-        src: '/img/logo.svg',
+        src: '/img/logo.png',
       },
       items: [
         {
