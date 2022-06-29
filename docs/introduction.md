@@ -17,9 +17,17 @@ Here are a few ways to get started:
 
 - Store setup and products configuration.
 - Configuring server notifications.
-- Package installation.
+- [Package installation](/docs/get-started/installation).
 - Package configuration.
 - Best practices and code examples.
+
+## Discussions and QA
+
+Feel free to join our humble community on Github.
+
+- [Laravel](https://github.com/imdhemy/laravel-in-app-purchases/discussions) discussion board.
+- [Google Play Billing](https://github.com/imdhemy/google-play-billing/discussions) discussion board.
+- [App Store IAP](https://github.com/imdhemy/appstore-iap/discussions) discussion board.
 
 ## Technical decisions
 
@@ -30,11 +38,3 @@ The current version supports Google Play and App Store. Good to mention that App
 ## Contributing
 
 Contributions are welcomed and will be fully credited. Please read and understand the [contribution guide](/docs/contributing) before creating an issue or pull request.
-
-## Discussions and QA
-
-Feel free to join our humble community on Github. 
-
-- [Laravel](https://github.com/imdhemy/laravel-in-app-purchases/discussions) discussion board.
-- [Google Play Billing](https://github.com/imdhemy/google-play-billing/discussions) discussion board.
-- [App Store IAP](https://github.com/imdhemy/appstore-iap/discussions) discussion board.

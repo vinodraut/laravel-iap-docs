@@ -1,8 +1,8 @@
-# Get Started
+---
+sidebar_position: 1
+---
 
-Laravel In-app Purchase (**LIAP**) provides you everything you need to implement and manage in-app purchases and subscriptions. **LIAP** was designed from the ground up to be easily installed and used to get your in-app purchases features up and running quickly. It gives you the required tools to mock receipts during development. No need to real receipts from different providers.
-
-## Installation
+# Installation
 
 Install the package via composer:
 
@@ -24,3 +24,11 @@ This creates a file `config/purchase.php` which contains 4 main keys:
 - `google_play_package_name`: The default Google play package name.
 - `appstore_password`: The default App Store password.
 - `eventListeners`: A List of Store events and event handlers.
+
+## Routing
+
+LIAP adds two `POST` endpoints ...
+
+## Event Listeners
+
+Your application should handle the different state of the subscription ...
