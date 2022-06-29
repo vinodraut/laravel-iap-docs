@@ -18,7 +18,7 @@ const FeatureList = [
     Svg: require('../../static/img/mock-receipts.svg').default,
     description: (
       <>
-        Laravel IAP lets you focus on your docs, and we&apos;ll do the chores. Go
+        Laravel IAP lets you focus on your logic, and we&apos;ll do the chores. Go
         ahead and focus on your business requirements not the receipt tasks.
       </>
     ),
