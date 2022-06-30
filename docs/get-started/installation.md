@@ -18,7 +18,7 @@ Publish the config file:
 php artisan liap:config:publish
 ```
 
-This creates a file `config/purchase.php` which contains 4 main keys:
+This creates a file `config/liap.php` which contains 4 main keys:
 
 - `routing`: Which allows you to add custom routing configurations.
 - `google_play_package_name`: The default Google play package name.
