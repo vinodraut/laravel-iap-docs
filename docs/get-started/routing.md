@@ -10,10 +10,10 @@ Liap provides a `POST` endpoint `liap.serverNotifications` to receive
 the [Server notifications](/docs/server-notifications) from different providers. This route uses a query
 variable `provider` to define the service provider.
 
-| Provider | URI | Query Value |
-| --- | --- | --- |
+| Provider    | URI                                        | Query Value |
+|-------------|--------------------------------------------|-------------|
 | Google Play | `/liap/notifications?provider=google-play` | google-play |
-| App Store | `/liap/notifications?provider=app-store` | app-store |
+| App Store   | `/liap/notifications?provider=app-store`   | app-store   |
 
 You can add custom configurations to this endpoint through the `routing` key in the config file `liap.php`. For
 instance, you can assign a [middleware](https://laravel.com/docs/middleware) or add a custom route prefix.
