@@ -3,7 +3,7 @@ slug: /
 sidebar_position: 1
 ---
 
-The top-notch Laravel In-app Purchases package Laravel IAP (**LIAP**). LIAP contains everything you need to implement
+Laravel In-App Purchases (**LIAP**) contains everything you need to implement
 and manage in-app purchases and subscriptions.
 
 - ⚡️ LIAP will help you manage the subscription life-cycle for Google Play and App Store.
