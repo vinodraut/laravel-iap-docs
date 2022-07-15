@@ -41,7 +41,7 @@ You can generate them using the following composer command:
 php artisan liap:url
 ```
 
-## Validating a signed route request
+## Validating a signed route requests
 
 In order to verify that an incoming request has a valid signature, you should set the `routing.signed` key to true.
 
@@ -50,8 +50,6 @@ In order to verify that an incoming request has a valid signature, you should se
 // .. 
     'routing' => [
         'signed' => true, // This is false by default
-        'middleware' => 'my_middleware',
-        'prefix' => 'my_prefix'
     ],
 ]
 ```
