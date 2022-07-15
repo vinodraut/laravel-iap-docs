@@ -7,7 +7,7 @@ sidebar_position: 2
 ## Introduction
 
 Liap provides a `POST` endpoint `liap.serverNotifications` to receive
-the [Server notifications](/docs/get-started/server-notifications) from different providers. This route uses a query
+the [Server notifications](/docs/server-notifications) from different providers. This route uses a query
 variable `provider` to define the service provider.
 
 | Provider    | URI                                        | Query Value |
