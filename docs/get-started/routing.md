@@ -7,7 +7,7 @@ sidebar_position: 2
 ## Introduction
 
 Liap provides a `POST` endpoint `liap.serverNotifications` to receive
-the [Server notifications](/docs/server-notifications) from different providers. This route uses a query
+the [Server notifications](/docs/get-started/server-notifications) from different providers. This route uses a query
 variable `provider` to define the service provider.
 
 | Provider    | URI                                        | Query Value |
@@ -20,12 +20,13 @@ instance, you can assign a [middleware](https://laravel.com/docs/middleware) or 
 
 ```php
 [   
-// .. 
     'routing' => [
         'signed' => false,
         'middleware' => 'my_middleware',
         'prefix' => 'my_prefix'
     ],
+    
+    // .. Other configurations are trimmed
 ]
 ```
 
@@ -33,7 +34,7 @@ instance, you can assign a [middleware](https://laravel.com/docs/middleware) or 
 
 In order to set up the server notifications, the service provider asks you to provide a URL to receive the server
 notifications. LIAP allows you to easily create a "signed" URL which have a "signature" hash appended to the query
-string. This allows Laravel to verify that the URL has not been modified since it was created.
+string. This allows LIAP/Laravel to verify that the URL has not been modified since it was created.
 
 You can generate them using the following composer command:
 
@@ -47,10 +48,11 @@ In order to verify that an incoming request has a valid signature, you should se
 
 ```php
 [   
-// .. 
     'routing' => [
         'signed' => true, // This is false by default
     ],
+    
+    // .. Other configurations are trimmed
 ]
 ```
 
