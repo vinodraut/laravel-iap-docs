@@ -3,8 +3,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Laravel In-App Purchase',
-  tagline: 'The top-notch receipt validator!',
+  title: 'Laravel In-App Purchases',
+  tagline: 'The top-notch php receipt validator!',
   url: 'https://imdhemy.github.io',
   baseUrl: '/laravel-iap-docs/',
   onBrokenLinks: 'throw',
