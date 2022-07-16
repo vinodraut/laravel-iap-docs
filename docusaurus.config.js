@@ -122,6 +122,7 @@ const config = {
         copyright:  `Copyright © ${new Date().getFullYear()} LIAP. Built with Love ❤ ️and PHP 🐘.`,
       },
       prism: {
+        additionalLanguages: ['php'],
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
