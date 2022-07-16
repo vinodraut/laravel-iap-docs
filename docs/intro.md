@@ -1,7 +1,8 @@
 ---
-slug: / 
 sidebar_position: 1
 ---
+
+# Introduction
 
 Laravel In-App Purchases (**LIAP**) contains everything you need to implement
 and manage in-app purchases and subscriptions.

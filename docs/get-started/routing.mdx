@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: "How to get a secure server notifications endpoint."
 ---
 
 # Routing
@@ -19,13 +20,13 @@ You can add custom configurations to this endpoint through the `routing` key in 
 instance, you can assign a [middleware](https://laravel.com/docs/middleware) or add a custom route prefix.
 
 ```php
-[   
+[
     'routing' => [
         'signed' => false,
         'middleware' => 'my_middleware',
         'prefix' => 'my_prefix'
     ],
-    
+
     // .. Other configurations are trimmed
 ]
 ```
@@ -47,13 +48,14 @@ php artisan liap:url
 In order to verify that an incoming request has a valid signature, you should set the `routing.signed` key to true.
 
 ```php
-[   
+[
     'routing' => [
         'signed' => true, // This is false by default
     ],
-    
+
     // .. Other configurations are trimmed
 ]
 ```
 
 If the incoming request does not have a valid signature, the middleware will automatically return a `403` HTTP response.
+
