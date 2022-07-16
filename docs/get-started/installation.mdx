@@ -28,12 +28,17 @@ This creates a file `config/liap.php` which contains 4 main keys:
 
 ### Routing
 
-LIAP provides you a route to receive the server notifications. The `routing` key allows you to secure this route. Check
+LIAP provides you a route to receive the server notifications. The `routing`
+key allows you to secure this route. Check
 the [routing](/docs/get-started/routing) document for detailed information.
 
 ### Event Listeners
 
-Your application should handle the different state of the subscription ...
+[Server Notifications](/docs/category/server-notifications) is a
+server-to-server service that notifies you in real time when the status of
+in-app purchases and refunds changes. Use the data in the notifications to
+update your user-account database, and to monitor and respond to in-app
+purchase refunds.
 
-
-
+**LIAP** provides you with a complete list of events that you can listen to.
+Check [Event Listeners](/docs/get-started/event-listeners) to learn how to use them.
