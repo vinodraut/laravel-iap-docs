@@ -19,7 +19,7 @@ variable `provider` to define the service provider.
 You can add custom configurations to this endpoint through the `routing` key in the config file `liap.php`. For
 instance, you can assign a [middleware](https://laravel.com/docs/middleware) or add a custom route prefix.
 
-```php
+```php title="config/liap.php"
 [
     'routing' => [
         'signed' => false,
@@ -45,9 +45,9 @@ php artisan liap:url
 
 ## Validating a signed route requests
 
-In order to verify that an incoming request has a valid signature, you should set the `routing.signed` key to true.
+In order to verify that an incoming request has a valid signature, you should set the `routing.signed` key to `true`.
 
-```php
+```php title="config/liap.php"
 [
     'routing' => [
         'signed' => true, // This is false by default
