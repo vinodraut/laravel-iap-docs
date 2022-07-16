@@ -93,15 +93,19 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                href: 'https://stackoverflow.com/questions/tagged/liap',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Laravel Discussions',
+                href: 'https://github.com/imdhemy/laravel-in-app-purchases/discussions',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'App Store Discussions',
+                href: 'https://github.com/imdhemy/appstore-iap/discussions',
+              },
+              {
+                label: 'Google Play Discussions',
+                href: 'https://github.com/imdhemy/google-play-billing/discussions',
               },
             ],
           },
@@ -109,17 +113,13 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
+                label: 'Buy me a coffee',
+                href: 'https://www.buymeacoffee.com/imdhemy',
+              }
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright:  `Copyright © ${new Date().getFullYear()} LIAP. Built with Love ❤ ️and PHP 🐘.`,
       },
       prism: {
         theme: lightCodeTheme,
