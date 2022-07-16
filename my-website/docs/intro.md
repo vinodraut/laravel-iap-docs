@@ -4,44 +4,45 @@ sidebar_position: 1
 
 # Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Laravel In-App Purchases (**LIAP**) contains everything you need to implement
+and manage in-app purchases and subscriptions.
 
-## Getting Started
+- ⚡️ LIAP will help you manage the subscription life-cycle for Google Play and App Store.
+- ⏳ Using real receipts on development is boring, LIAP lets you mock receipts.
+- 🧐 LIAP helps you to write a testable code.
 
-Get started by **creating a new site**.
+**LIAP** was designed from the ground up to be easily installed and used to get your in-app purchases features up and
+running quickly. It gives you the required tools to mock receipts during development. No need to real receipts from
+different providers.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Get started resources
 
-### What you'll need
+Here are a few ways to get started:
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- [Package installation](/docs/get-started/installation).
+- Store setup and products configuration.
+- Configuring server notifications.
+- Best practices and code examples.
 
-## Generate a new site
+## Discussions and QA
 
-Generate a new Docusaurus site using the **classic template**.
+Feel free to join our humble community on Github.
 
-The classic template will automatically be added to your project after you run the command:
+- [Laravel](https://github.com/imdhemy/laravel-in-app-purchases/discussions) discussion board.
+- [Google Play Billing](https://github.com/imdhemy/google-play-billing/discussions) discussion board.
+- [App Store IAP](https://github.com/imdhemy/appstore-iap/discussions) discussion board.
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+## Technical decisions
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+LIAP is a wrapper over two packages App Store IAP and Google Play Billing. Developing and maintaining separate packages
+per store gives us the ability to re-use the code to support different PHP frameworks. We started by Laravel, but
+supporting other Frameworks is planned, the next one will be Symfony. In addition to code re-usability, separate
+packages opens the door to support more stores and service providers in the future.
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+The current version supports Google Play and App Store. Good to mention that App Store Notifications `v2` is not
+supported, but it will be supported in the next release.
 
-## Start your site
+## Contributing
 
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Contributions are welcomed and will be fully credited. Please read and understand
+the [contribution guide](/docs/contributing) before creating an issue or pull request.
