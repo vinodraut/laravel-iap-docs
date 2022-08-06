@@ -5,4 +5,29 @@ description: "List of available events"
 
 # Available Events
 
+This is a list of all supported events triggered by Liap once a server
+notification is received. Each event is documented below, and you can follow
+this guide to learn [how to use them](/docs/get-started/event-listeners).
 
+### App Store Events
+
+:::caution Caution :::
+Till now Liap only supports [v.1 notifications](https://developer.apple.com/documentation/appstoreservernotifications/notification_type) from the App Store. V.2 will
+be supported in the next release.
+:::
+
+| Event                     | Namespace                                                  | Description                                                                                                                                                                                          |
+|---------------------------|------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Cancel                    | `Imdhemy\Purchases\Events\AppStore\Cancel`                 | Apple support cancelled the auto-renewable subscription and the user received a refund.                                                                                                              |
+| Consumption request       | `Imdhemy\Purchases\Events\AppStore\ConsumptionRequest`     | The customer initiated a refund request for a consumable in-app purchase, and the App Store is requesting that you provide consumption data.Apple support requested the user to consume the product. |
+| Did change renewal pref   | `Imdhemy\Purchases\Events\AppStore\DidChangeRenewalPref`   | The customer made a change in their subscription plan that takes effect at the next renewal. The currently active plan isn’t affected.                                                               |
+| Did change renewal status | `Imdhemy\Purchases\Events\AppStore\DidChangeRenewalStatus` | Indicates a change in the subscription renewal status.                                                                                                                                               |
+| Did fail to renew         | `Imdhemy\Purchases\Events\AppStore\DidFailToRenew`         | Indicates a subscription that failed to renew due to a billing issue.                                                                                                                                |
+| Did recover               | `Imdhemy\Purchases\Events\AppStore\DidRecover`             | Indicates a successful automatic renewal of an expired subscription that failed to renew in the past.                                                                                                |
+| Did renew                 | `Imdhemy\Purchases\Events\AppStore\DidRenew`               | Indicates that a customer’s subscription has successfully auto-renewed for a new transaction period.                                                                                                 |
+| Initial buy               | `Imdhemy\Purchases\Events\AppStore\InitialBuy`             | Occurs at the user’s initial purchase of the subscription.                                                                                                                                           |
+| Interactive renewal       | `Imdhemy\Purchases\Events\AppStore\InteractiveRenewal`     | Indicates the customer renewed a subscription interactively, either by using your app’s interface, or on the App Store in the account’s Subscriptions settings.                                      |
+| Price increase consent    | `Imdhemy\Purchases\Events\AppStore\PriceIncreaseConsent`   | Indicates that the App Store has started asking the customer to consent to your app’s auto-renewable subscription price increase that requires consent.                                              |
+| Refund                    | `Imdhemy\Purchases\Events\AppStore\Refund`                 | Indicates that the App Store successfully refunded a transaction for a consumable in-app purchase, a non-consumable in-app purchase, or a non-renewing subscription.                                 |
+| Revoke                    | `Imdhemy\Purchases\Events\AppStore\Revoke`                 | Indicates that an in-app purchase the user was entitled to through Family Sharing is no longer available through sharing.                                                                            |
+| ~~Renewal~~               | `Imdhemy\Purchases\Events\AppStore\Renewal`                | **DEPRECATED** Use **Did recover** instead.                                                                                                                                                          |
