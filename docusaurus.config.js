@@ -49,6 +49,10 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        gtag: {
+          trackingID: 'G-WG1WZ488DX',
+          anonymizeIP: true,
+        }
       }),
     ],
   ],
@@ -125,10 +129,6 @@ const config = {
         additionalLanguages: ['php'],
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-      },
-      gtag: {
-        trackingID: 'G-WG1WZ488DX',
-        anonymizeIP: true,
       }
     }),
 };
