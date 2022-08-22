@@ -31,8 +31,8 @@ that the purchase is valid.
 You can verify the receipt using the `Product` Facade as follows:
 
 ```php title="ProductController.php"
-use \Imdhemy\Purchases\Facades\Product;
-use \Exception;
+use Imdhemy\Purchases\Facades\Product;
+use Exception;
 
 // Verify the receipt on App Store
 $receiptResponse = Product::appStore()->receiptData($receipt)->verifyReceipt();
@@ -56,3 +56,7 @@ if ($productPurchased) {
 
 throw new Exception('Product not purchased');
 ```
+
+:::caution
+Code samples above are for guidance only. You should use maintain your own business logic.
+:::

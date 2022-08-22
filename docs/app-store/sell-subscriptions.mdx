@@ -4,3 +4,45 @@ description: "A Guide to App Store Subscription receipt validation."
 ---
 
 # Sell Subscriptions
+
+There are two types of subscriptions, **Auto-renewable** and **Non-renewable** subscriptions. The former provides
+**ongoing** access to the content users purchase, it allows Family sharing, and it can be automatically renewed. The
+latter provides access to the content for a limited period of time, and it cannot be renewed. So people need to
+purchase a new subscription to continue enjoying the content.
+
+- [Offer auto-renewable subscription](https://help.apple.com/app-store-connect/#/dev75708c031).
+- [Offer non-renewable subscription](https://help.apple.com/app-store-connect/#/devfe9203d26).
+
+## Receipt Validation
+
+An App Store receipt is a binary encrypted file singed with an Apple certificate. Your mobile application should
+receive the receipt once a successful purchase is made. The receipt should be validated against the Apple App Store
+on your server, and here **LIAP** comes into play.
+
+You can verify the receipt using the `Subscription` Facade as follows:
+
+```php
+use Imdhemy\Purchases\Facades\Subscription;
+
+// Verifiy the receipt on App Store servers.
+// For non-renewable subscriptions, you can use the `verifyReceipt` method.
+// Subscription::appStore()->receiptData($receipt)->verifyReceipt();
+$receiptResponse = Subscription::appStore()->receiptData($receipt)->verifyRenewable();
+
+// Get the receipt status
+$receiptStatus = $receiptResponse->getStatus();
+
+if($status->isValid()) {
+    // The receipt is valid
+} else {
+    // The receipt is invalid
+}
+```
+
+The `latestReceiptInfo` method returns an array of objects containing all the transactions for the subscription,
+including the initial purchase, and subsequent renewals. You can use the values to determine if the subscription
+expired or not, Just use the `getter` methods to get the values.
+
+:::caution
+Code samples above are for guidance only. You should use maintain your own business logic.
+:::
