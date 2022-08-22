@@ -33,13 +33,21 @@ $receiptResponse = Subscription::appStore()->receiptData($receipt)->verifyRenewa
 $receiptStatus = $receiptResponse->getStatus();
 
 if($status->isValid()) {
-    // The receipt is valid
+    $latestReceiptInfo = $status->getLatestReceiptInfo();
+    // You can loop all of them or either get the first one (recently purchased).
+    $receiptInfo = $latestReceiptInfo[0];
+
+    $productId = $receiptInfo->getProductId();
+    $transactionId = $receiptInfo->getTransactionId();
+    $originalTransactionId = $receiptInfo->getOriginalTransactionId();
+    $expiresDate = $receiptInfo->getExpiresDate();
+    // And so on...
 } else {
     // The receipt is invalid
 }
 ```
 
-The `latestReceiptInfo` method returns an array of objects containing all the transactions for the subscription,
+The `getLatestReceiptInfo()` method returns an array of objects containing all the transactions for the subscription,
 including the initial purchase, and subsequent renewals. You can use the values to determine if the subscription
 expired or not, Just use the `getter` methods to get the values.
 
