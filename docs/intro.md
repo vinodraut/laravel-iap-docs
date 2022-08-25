@@ -20,8 +20,10 @@ different providers.
 Here are a few ways to get started:
 
 - [Package installation](/docs/get-started/installation).
-- Store setup and products configuration.
-- Configuring server notifications.
+- [Selling on App Store](/docs/category/app-store/).
+- [Selling on Google Play](/docs/category/google-play-billing).
+- [Configuring server notifications](/docs/category/server-notifications).
+- [Credentials](/docs/category/credentials).
 - Best practices and code examples.
 
 ## Discussions and QA
