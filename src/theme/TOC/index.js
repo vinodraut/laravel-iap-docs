@@ -2,28 +2,36 @@ import React, {useEffect} from 'react';
 import TOC from '@theme-original/TOC';
 import Head from '@docusaurus/Head';
 
-const adsContainerStyle = {
-  position: 'relative',
-  display: 'flex',
-  alignItems: 'flexEnd',
-  justifyContent: 'center',
-};
-
-const adsContentStyle = {
-  position: 'fixed',
-  bottom: 270,
-  zIndex: 100,
-};
-
 export default function TOCWrapper(props) {
   useEffect(() => {
     const adsbygoogle = window.adsbygoogle || [];
     try {
       adsbygoogle.push({});
     } catch (e) {
-      // ignore
+      console.log(e.message);
     }
   }, []);
+
+  const toc = props.toc || [];
+  const styles = {
+    ads: {
+      container: {
+        position: 'sticky',
+        top: toc.length * 30 + 120,
+        width: '100%',
+      },
+      content: {},
+      title: {
+        display: 'block',
+        textAlign: 'center',
+        color: '#777',
+        textTransform: 'uppercase',
+      },
+      item: {
+        display: 'block',
+      },
+    },
+  };
 
   return (
       <>
@@ -33,11 +41,11 @@ export default function TOCWrapper(props) {
                   crossOrigin="anonymous"></script>
         </Head>
         <TOC {...props} />
-        <div style={adsContainerStyle}>
-          <div style={adsContentStyle}>
-            <span style={{color: '#999', display: 'block'}}>Advertisement</span>
+        <div style={styles.ads.container}>
+          <div style={styles.ads.content}>
+            <span style={styles.ads.title}>Ads</span>
             <ins className="adsbygoogle"
-                 style={{display: 'block'}}
+                 style={styles.ads.item}
                  data-ad-client="ca-pub-9706318396052314"
                  data-ad-slot="3682979857"
                  data-ad-format="auto"
