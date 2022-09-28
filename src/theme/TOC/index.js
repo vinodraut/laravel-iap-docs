@@ -11,14 +11,17 @@ const adsContainerStyle = {
 
 const adsContentStyle = {
   position: 'fixed',
+  bottom: 270,
   zIndex: 100,
 };
 
 export default function TOCWrapper(props) {
   useEffect(() => {
-    if (window.location.hostname !== 'localhost') {
-      const adsbygoogle = window.adsbygoogle || [];
+    const adsbygoogle = window.adsbygoogle || [];
+    try {
       adsbygoogle.push({});
+    } catch (e) {
+      // ignore
     }
   }, []);
 
