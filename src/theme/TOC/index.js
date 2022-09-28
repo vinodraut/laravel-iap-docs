@@ -3,8 +3,10 @@ import TOC from '@theme-original/TOC';
 import Head from '@docusaurus/Head';
 
 export default function TOCWrapper(props) {
-  const adsbygoogle = window.adsbygoogle || [];
-  adsbygoogle.push({});
+ useEffect(()=> {
+   const adsbygoogle = window.adsbygoogle || [];
+   adsbygoogle.push({});
+ }, []);
 
   return (
     <>
