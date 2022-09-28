@@ -17,7 +17,7 @@ export default function TOCWrapper(props) {
     ads: {
       container: {
         position: 'sticky',
-        top: toc.length * 50 + 120,
+        top: toc.length * 50 + 150,
         width: '100%',
       },
       content: {},
