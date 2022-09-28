@@ -16,13 +16,15 @@ export default function TOCWrapper(props) {
                 crossOrigin="anonymous"></script>
       </Head>
       <TOC {...props} />
-
-      <ins className="adsbygoogle"
-           style={{display: 'block'}}
-           data-ad-client="ca-pub-9706318396052314"
-           data-ad-slot="3682979857"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
+     <div style={{padding: 15}}>
+       <span style={{color: '#999', display: 'block'}}>Advertisement</span>
+       <ins className="adsbygoogle"
+            style={{display: 'block'}}
+            data-ad-client="ca-pub-9706318396052314"
+            data-ad-slot="3682979857"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+     </div>
     </>
   );
 }
