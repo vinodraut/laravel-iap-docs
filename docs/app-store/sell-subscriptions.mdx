@@ -32,8 +32,8 @@ $receiptResponse = Subscription::appStore()->receiptData($receipt)->verifyRenewa
 // Get the receipt status
 $receiptStatus = $receiptResponse->getStatus();
 
-if($status->isValid()) {
-    $latestReceiptInfo = $status->getLatestReceiptInfo();
+if($receiptStatus->isValid()) {
+    $latestReceiptInfo = $receiptStatus->getLatestReceiptInfo();
     // You can loop all of them or either get the first one (recently purchased).
     $receiptInfo = $latestReceiptInfo[0];
 
