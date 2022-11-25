@@ -57,4 +57,13 @@ Code samples above are for guidance only. You should maintain your own business 
 
 ## Available Methods
 
-Refer to [Sell Products](/docs/app-store/sell-products#available-methods) for available methods.
+The returned object from the validation is an instance of `\Imdhemy\AppStore\Receipts\ReceiptResponse`, which
+represents the [response body](https://developer.apple.com/documentation/appstorereceipts/responsebody) returned from App Store.
+
+For any property, describe in the App Store documentation, there is a `getter` method that returns its value.
+The getter method names are the same as the property names, except that are prefixed with `get` and are `camelCase`.
+
+For example, the `getEnvironment()` method returns the `environment` property.
+
+If the property is an array/JSON object, the returned value will be an instance of a class that represents that
+object. The same idea of `getter` methods applies to the returned class.
