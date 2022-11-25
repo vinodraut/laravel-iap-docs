@@ -70,12 +70,12 @@ Select provider:
 Based on your answers, it will generate a table with the following columns:
 
 ```shell
-+-------------+-------------------------------------------------------------------------------------------------------------------------------------+
-| Provider    | URL                                                                                                                                 |
-+-------------+-------------------------------------------------------------------------------------------------------------------------------------+
-| App Store   | http://localhost/liap/notifications?signature=538885e62adda33d1b7e5a49238ec35fa872edd394ec4b6854f42062f34173b4&provider=app-store   |
-| Google Play | http://localhost/liap/notifications?signature=538885e62adda33d1b7e5a49238ec35fa872edd394ec4b6854f42062f34173b4&provider=google-play |
-+-------------+-------------------------------------------------------------------------------------------------------------------------------------+
++-------------+--------------------------------------------------------------------------------+
+| Provider    | URL                                                                            |
++-------------+--------------------------------------------------------------------------------+
+| App Store   | http://localhost/liap/notifications?signature=<signature>&provider=app-store   |
+| Google Play | http://localhost/liap/notifications?signature=<signature>&provider=google-play |
++-------------+--------------------------------------------------------------------------------+
 ```
 
 The generated URLs will be used to receive the [server notifications](/docs/category/server-notifications).
